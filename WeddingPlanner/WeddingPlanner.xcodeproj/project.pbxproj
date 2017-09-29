@@ -19,6 +19,7 @@
 		6E3EF08C1F7EE99F00E61BDD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3EF08B1F7EE99F00E61BDD /* Event.swift */; };
 		6E3EF08E1F7EEAD100E61BDD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3EF08D1F7EEAD100E61BDD /* Person.swift */; };
 		6E3EF0901F7EEC8300E61BDD /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3EF08F1F7EEC8300E61BDD /* Zone.swift */; };
+		6E3EF0931F7EEFBE00E61BDD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E3EF0911F7EEFBE00E61BDD /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		6E3EF08B1F7EE99F00E61BDD /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		6E3EF08D1F7EEAD100E61BDD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		6E3EF08F1F7EEC8300E61BDD /* Zone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
+		6E3EF0921F7EEFBE00E61BDD /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				6E3EF07E1F7EE8F300E61BDD /* CoreWedding.h */,
 				6E3EF07F1F7EE8F400E61BDD /* Info.plist */,
+				6E3EF0911F7EEFBE00E61BDD /* Model.xcdatamodeld */,
 				6E3EF0891F7EE90400E61BDD /* Plan.swift */,
 				6E3EF08B1F7EE99F00E61BDD /* Event.swift */,
 				6E3EF08D1F7EEAD100E61BDD /* Person.swift */,
@@ -252,6 +255,7 @@
 			files = (
 				6E3EF08E1F7EEAD100E61BDD /* Person.swift in Sources */,
 				6E3EF0901F7EEC8300E61BDD /* Zone.swift in Sources */,
+				6E3EF0931F7EEFBE00E61BDD /* Model.xcdatamodeld in Sources */,
 				6E3EF08C1F7EE99F00E61BDD /* Event.swift in Sources */,
 				6E3EF08A1F7EE90400E61BDD /* Plan.swift in Sources */,
 			);
@@ -506,6 +510,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6E3EF0911F7EEFBE00E61BDD /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6E3EF0921F7EEFBE00E61BDD /* Model.xcdatamodel */,
+			);
+			currentVersion = 6E3EF0921F7EEFBE00E61BDD /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6E3EF0571F7EE88600E61BDD /* Project object */;
 }

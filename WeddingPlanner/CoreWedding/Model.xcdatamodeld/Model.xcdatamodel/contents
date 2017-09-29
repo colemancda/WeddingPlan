@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Color" representedClassName=".Color" syncable="YES" codeGenerationType="class">
+        <attribute name="blue" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="green" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="red" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="plan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plan" inverseName="colors" inverseEntity="Plan" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName=".EventManagedObject" syncable="YES" codeGenerationType="category">
+        <attribute name="duration" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="music" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="uuid" attributeType="UUID" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="highlightedPeople" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="events" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName=".PersonManagedObject" syncable="YES" codeGenerationType="class">
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="highlightedPeople" inverseEntity="Event" syncable="YES"/>
+        <relationship name="plans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plan" inverseName="people" inverseEntity="Plan" syncable="YES"/>
+    </entity>
+    <entity name="Plan" representedClassName=".PlanManagedObject" syncable="YES" codeGenerationType="class">
+        <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="link" attributeType="URI" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="start" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="uuid" attributeType="UUID" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="colors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Color" inverseName="plan" inverseEntity="Color" syncable="YES"/>
+        <relationship name="people" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="plans" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Zone" representedClassName="Zone" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Plan" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="Event" positionX="-54" positionY="45" width="128" height="105"/>
+        <element name="Person" positionX="-36" positionY="54" width="128" height="75"/>
+        <element name="Color" positionX="-18" positionY="81" width="128" height="105"/>
+        <element name="Zone" positionX="0" positionY="108" width="128" height="60"/>
+    </elements>
+</model>
